@@ -1,3 +1,4 @@
+
 """
 Django settings for library project.
 
@@ -37,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #apps
+    'books', 
+    'authors'
 ]
 
 MIDDLEWARE = [
