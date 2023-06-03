@@ -1,9 +1,9 @@
 from django.urls import path
-from . import views
+from .views import AuthorList, AuthorDetail
 
 app_name = 'authors'
 
 urlpatterns = [
-    path('', views.authors, name="authors-home"), 
-    path('<int:pk>/', views.author_detail, name = "author-detail")
+    path('', AuthorList.as_view(), name="authors-home"), 
+    path('<int:pk>/', AuthorDetail.as_view(), name = "author-detail")
 ]

@@ -1,8 +1,9 @@
-from django.contrib import admin
 from django.urls import path
-from . import views 
+from .views import BookList, BookDetail 
+
+app_name = 'books'
 
 urlpatterns = [
-    path('books/', views.book_list, name='book_list'),
-    path('books/<int:pk>/', views.book_detail, name='book_detail')
+    path('', BookList.as_view(), name='book-list'),
+    path('books/<int:pk>/', BookDetail.as_view(), name='book-detail')
 ]
